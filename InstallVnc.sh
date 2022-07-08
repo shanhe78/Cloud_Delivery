@@ -33,7 +33,7 @@ vncserver :2
 netstat -nap | grep vnc
 
 echo -e "\033[35m 步骤7.安装XRDP \033[0m"
-
+yum -y install epel-release
 yum -y install xrdp
 sed -i 's/port=-1/port=5902/g' /etc/xrdp/xrdp.ini
 systemctl start xrdp
